@@ -100,7 +100,7 @@ dependencies:
   the_apple_sign_in: ^1.1.1
 
   # DOWNLOAD INVOICE PDF
-  pdf: ^3.10.8
+  pdf: 3.10.6
   path_provider: ^2.1.1
   open_file: ^3.3.2
   printing: ^5.11.1
