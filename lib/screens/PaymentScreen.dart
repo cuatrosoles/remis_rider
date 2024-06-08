@@ -6,15 +6,16 @@ import 'package:flutter/material.dart';
 ///import 'package:flutter_braintree/flutter_braintree.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 ////import 'package:flutter_paystack/flutter_paystack.dart';
-import 'package:flutter_paytabs_bridge/BaseBillingShippingInfo.dart' as payTab;
-import 'package:flutter_paytabs_bridge/IOSThemeConfiguration.dart';
-import 'package:flutter_paytabs_bridge/PaymentSdkApms.dart';
-import 'package:flutter_paytabs_bridge/PaymentSdkConfigurationDetails.dart';
-import 'package:flutter_paytabs_bridge/flutter_paytabs_bridge.dart';
+///import 'package:flutter_paytabs_bridge/BaseBillingShippingInfo.dart' as payTab;
+///import 'package:flutter_paytabs_bridge/IOSThemeConfiguration.dart';
+///import 'package:flutter_paytabs_bridge/PaymentSdkApms.dart';
+///import 'package:flutter_paytabs_bridge/PaymentSdkConfigurationDetails.dart';
+///import 'package:flutter_paytabs_bridge/flutter_paytabs_bridge.dart';
 ////import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:flutterwave_standard/flutterwave.dart';
-import 'package:flutterwave_standard/view/view_utils.dart';
+
+///import 'package:flutterwave_standard/flutterwave.dart';
+///import 'package:flutterwave_standard/view/view_utils.dart';
 import 'package:http/http.dart' as http;
 
 // import 'package:mercado_pago_mobile_checkout/mercado_pago_mobile_checkout.dart';
@@ -394,6 +395,7 @@ class PaymentScreenState extends State<PaymentScreen> {
   */
 
   /// FlutterWave Payment
+  /*
   void flutterWaveCheckout() async {
     final customer = Customer(
         name: sharedPref.getString(USER_NAME).validate(),
@@ -420,8 +422,10 @@ class PaymentScreenState extends State<PaymentScreen> {
       FlutterwaveViewUtils.showToast(context, language.transactionFailed);
     }
   }
+  */
 
   /// PayTabs Payment
+  /*
   void payTabsPayment() {
     FlutterPaytabsBridge.startCardPayment(generateConfig(), (event) {
       setState(() {
@@ -442,7 +446,9 @@ class PaymentScreenState extends State<PaymentScreen> {
       });
     });
   }
+  */
 
+  /*
   PaymentSdkConfigurationDetails generateConfig() {
     List<PaymentSdkAPms> apms = [];
     apms.add(PaymentSdkAPms.STC_PAY);
@@ -478,6 +484,7 @@ class PaymentScreenState extends State<PaymentScreen> {
 
     return configuration;
   }
+  */
 
   // /// Mercado Pago payment
   // void mercadoPagoPayment() async {
@@ -691,6 +698,7 @@ class PaymentScreenState extends State<PaymentScreen> {
               : SizedBox(),
         ],
       ),
+      /*
       bottomNavigationBar: Padding(
         padding: EdgeInsets.all(16),
         child: Visibility(
@@ -705,11 +713,11 @@ class PaymentScreenState extends State<PaymentScreen> {
 
               ///} else if (selectedPaymentType == PAYMENT_TYPE_PAYSTACK) {
               ///  payStackPayment(context);
-              if (selectedPaymentType == PAYMENT_TYPE_FLUTTERWAVE) {
-                flutterWaveCheckout();
-              } else if (selectedPaymentType == PAYMENT_TYPE_PAYTABS) {
-                payTabsPayment();
-              } else if (selectedPaymentType == PAYMENT_TYPE_MERCADOPAGO) {
+              ///if (selectedPaymentType == PAYMENT_TYPE_FLUTTERWAVE) {
+              ///  flutterWaveCheckout();
+              ///} else if (selectedPaymentType == PAYMENT_TYPE_PAYTABS) {
+              ///  payTabsPayment();
+              ///} else if (selectedPaymentType == PAYMENT_TYPE_MERCADOPAGO) {
                 // mercadoPagoPayment();
                 /*
               } else if (selectedPaymentType == PAYMENT_TYPE_MYFATOORAH) {
@@ -719,11 +727,12 @@ class PaymentScreenState extends State<PaymentScreen> {
               }
               */
               }
-              ;
+
             },
           ),
         ),
       ),
+    */
     );
   }
 }

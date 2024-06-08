@@ -61,19 +61,9 @@ public final class GeneratedPluginRegistrant {
       Log.e(TAG, "Error registering plugin firebase_storage, io.flutter.plugins.firebase.storage.FlutterFirebaseStoragePlugin", e);
     }
     try {
-      flutterEngine.getPlugins().add(new com.pichillilorenzo.flutter_inappwebview.InAppWebViewFlutterPlugin());
-    } catch (Exception e) {
-      Log.e(TAG, "Error registering plugin flutter_inappwebview, com.pichillilorenzo.flutter_inappwebview.InAppWebViewFlutterPlugin", e);
-    }
-    try {
       flutterEngine.getPlugins().add(new com.jayesh.flutter_contact_picker.FlutterContactPickerPlugin());
     } catch (Exception e) {
       Log.e(TAG, "Error registering plugin flutter_native_contact_picker, com.jayesh.flutter_contact_picker.FlutterContactPickerPlugin", e);
-    }
-    try {
-      flutterEngine.getPlugins().add(new com.paymentsdk.flutter_paymentsdk_bridge.FlutterPaytabsBridgePlugin());
-    } catch (Exception e) {
-      Log.e(TAG, "Error registering plugin flutter_paytabs_bridge, com.paymentsdk.flutter_paymentsdk_bridge.FlutterPaytabsBridgePlugin", e);
     }
     try {
       flutterEngine.getPlugins().add(new io.flutter.plugins.flutter_plugin_android_lifecycle.FlutterAndroidLifecyclePlugin());

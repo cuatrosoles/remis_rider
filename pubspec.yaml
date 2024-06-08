@@ -83,8 +83,8 @@ dependencies:
   ##flutter_stripe: ^9.5.0+1
   ##flutter_paystack: ^1.0.7
   ##flutter_braintree: ^3.0.0
-  flutterwave_standard: ^1.0.8
-  flutter_paytabs_bridge: ^2.6.3
+  ##flutterwave_standard: ^1.0.8
+  ##flutter_paytabs_bridge: ^2.6.3
 #  mercado_pago_mobile_checkout: ^0.2.0-dev.3
   ##my_fatoorah: ^3.3.0
   ##paytm: ^3.0.1

@@ -60,22 +60,10 @@
 @import firebase_storage;
 #endif
 
-#if __has_include(<flutter_inappwebview/InAppWebViewFlutterPlugin.h>)
-#import <flutter_inappwebview/InAppWebViewFlutterPlugin.h>
-#else
-@import flutter_inappwebview;
-#endif
-
 #if __has_include(<flutter_native_contact_picker/FlutterNativeContactPickerPlugin.h>)
 #import <flutter_native_contact_picker/FlutterNativeContactPickerPlugin.h>
 #else
 @import flutter_native_contact_picker;
-#endif
-
-#if __has_include(<flutter_paytabs_bridge/FlutterPaymentSDKBridgePlugin.h>)
-#import <flutter_paytabs_bridge/FlutterPaymentSDKBridgePlugin.h>
-#else
-@import flutter_paytabs_bridge;
 #endif
 
 #if __has_include(<fluttertoast/FluttertoastPlugin.h>)
@@ -210,9 +198,7 @@
   [FLTFirebaseCrashlyticsPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseCrashlyticsPlugin"]];
   [FLTFirebaseDatabasePlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseDatabasePlugin"]];
   [FLTFirebaseStoragePlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseStoragePlugin"]];
-  [InAppWebViewFlutterPlugin registerWithRegistrar:[registry registrarForPlugin:@"InAppWebViewFlutterPlugin"]];
   [FlutterNativeContactPickerPlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterNativeContactPickerPlugin"]];
-  [FlutterPaymentSDKBridgePlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterPaymentSDKBridgePlugin"]];
   [FluttertoastPlugin registerWithRegistrar:[registry registrarForPlugin:@"FluttertoastPlugin"]];
   [GeocodingPlugin registerWithRegistrar:[registry registrarForPlugin:@"GeocodingPlugin"]];
   [GeolocatorPlugin registerWithRegistrar:[registry registrarForPlugin:@"GeolocatorPlugin"]];
