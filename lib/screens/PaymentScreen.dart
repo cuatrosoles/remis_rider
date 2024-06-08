@@ -2,7 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_braintree/flutter_braintree.dart';
+
+///import 'package:flutter_braintree/flutter_braintree.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 ////import 'package:flutter_paystack/flutter_paystack.dart';
 import 'package:flutter_paytabs_bridge/BaseBillingShippingInfo.dart' as payTab;
@@ -10,16 +11,16 @@ import 'package:flutter_paytabs_bridge/IOSThemeConfiguration.dart';
 import 'package:flutter_paytabs_bridge/PaymentSdkApms.dart';
 import 'package:flutter_paytabs_bridge/PaymentSdkConfigurationDetails.dart';
 import 'package:flutter_paytabs_bridge/flutter_paytabs_bridge.dart';
-import 'package:flutter_stripe/flutter_stripe.dart';
+////import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutterwave_standard/flutterwave.dart';
 import 'package:flutterwave_standard/view/view_utils.dart';
 import 'package:http/http.dart' as http;
 
 // import 'package:mercado_pago_mobile_checkout/mercado_pago_mobile_checkout.dart';
-import 'package:my_fatoorah/my_fatoorah.dart';
-import 'package:paytm/paytm.dart';
-import 'package:razorpay_flutter/razorpay_flutter.dart';
+////import 'package:my_fatoorah/my_fatoorah.dart';
+////import 'package:paytm/paytm.dart';
+////import 'package:razorpay_flutter/razorpay_flutter.dart';
 import '../screens/DashBoardScreen.dart';
 import '../utils/Extensions/StringExtensions.dart';
 
@@ -32,7 +33,8 @@ import '../../utils/Constants.dart';
 import '../../utils/Extensions/AppButtonWidget.dart';
 import '../../utils/Extensions/app_common.dart';
 import '../model/PaymentListModel.dart';
-import '../model/StripePayModel.dart';
+
+///import '../model/StripePayModel.dart';
 import '../utils/images.dart';
 
 class PaymentScreen extends StatefulWidget {
@@ -69,7 +71,7 @@ class PaymentScreenState extends State<PaymentScreen> {
   bool loading = false;
 
   ///final plugin = PaystackPlugin();
-  late Razorpay _razorpay;
+  ////late Razorpay _razorpay;
   ////CheckoutMethod method = CheckoutMethod.card;
 
   @override
@@ -80,6 +82,7 @@ class PaymentScreenState extends State<PaymentScreen> {
 
   void init() async {
     await paymentListApiCall();
+    /*
     if (paymentList.any((element) => element.type == PAYMENT_TYPE_STRIPE)) {
       Stripe.publishableKey = stripPaymentPublishKey.validate();
       if (Platform.isIOS) {
@@ -89,16 +92,19 @@ class PaymentScreenState extends State<PaymentScreen> {
         log("${e.toString()}");
       });
     }
+    */
 
     ///if (paymentList.any((element) => element.type == PAYMENT_TYPE_PAYSTACK)) {
     ///  plugin.initialize(publicKey: payStackPublicKey.validate());
     ///}
+    /*
     if (paymentList.any((element) => element.type == PAYMENT_TYPE_RAZORPAY)) {
       _razorpay = Razorpay();
       _razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, _handlePaymentSuccess);
       _razorpay.on(Razorpay.EVENT_PAYMENT_ERROR, _handlePaymentError);
       _razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, _handleExternalWallet);
     }
+    */
   }
 
   /// Get Payment Gateway Api Call
@@ -178,6 +184,7 @@ class PaymentScreenState extends State<PaymentScreen> {
   }
 
   /// Razor Pay
+  /*
   void razorPayPayment() {
     var options = {
       'key': razorKey.validate(),
@@ -201,7 +208,9 @@ class PaymentScreenState extends State<PaymentScreen> {
       debugPrint('Error: e');
     }
   }
+  */
 
+  /*
   void _handlePaymentSuccess(PaymentSuccessResponse response) {
     Fluttertoast.showToast(
         msg: "SUCCESS: " + response.paymentId!,
@@ -220,6 +229,7 @@ class PaymentScreenState extends State<PaymentScreen> {
         msg: "EXTERNAL_WALLET: " + response.walletName!,
         toastLength: Toast.LENGTH_SHORT);
   }
+  */
 
   /// StripPayment
   void stripePay() async {
@@ -242,8 +252,10 @@ class PaymentScreenState extends State<PaymentScreen> {
 
     appStore.setLoading(true);
 
+    /*
     await request.send().then((value) {
       appStore.setLoading(false);
+
       http.Response.fromStream(value).then((response) async {
         if (response.statusCode == 200) {
           var res = StripePayModel.fromJson(await handleResponse(response));
@@ -296,6 +308,7 @@ class PaymentScreenState extends State<PaymentScreen> {
       appStore.setLoading(false);
       toast(e.toString(), print: true);
     });
+    */
   }
 
   Future<void> paymentConfirm() async {
@@ -364,6 +377,7 @@ class PaymentScreenState extends State<PaymentScreen> {
   }
 
   /// Paypal Payment
+  /*
   void payPalPayment() async {
     final request = BraintreePayPalRequest(
         amount: widget.amount.toString(),
@@ -377,6 +391,7 @@ class PaymentScreenState extends State<PaymentScreen> {
       paymentConfirm();
     }
   }
+  */
 
   /// FlutterWave Payment
   void flutterWaveCheckout() async {
@@ -497,6 +512,7 @@ class PaymentScreenState extends State<PaymentScreen> {
   // }
 
   /// My Fatoorah Payment
+  /*
   Future<void> myFatoorahPayment() async {
     PaymentResponse response = await MyFatoorah.startPayment(
       context: context,
@@ -542,8 +558,10 @@ class PaymentScreenState extends State<PaymentScreen> {
       toast(language.paymentFailed);
     }
   }
+  */
 
   /// PayTm Payment
+  /*
   void paytmPayment() async {
     setState(() {
       loading = true;
@@ -608,6 +626,7 @@ class PaymentScreenState extends State<PaymentScreen> {
       print(e);
     }
   }
+  */
 
   @override
   void setState(fn) {
@@ -679,26 +698,28 @@ class PaymentScreenState extends State<PaymentScreen> {
           child: AppButtonWidget(
             text: language.pay,
             onTap: () {
-              if (selectedPaymentType == PAYMENT_TYPE_RAZORPAY) {
-                razorPayPayment();
-              } else if (selectedPaymentType == PAYMENT_TYPE_STRIPE) {
-                stripePay();
+              ///if (selectedPaymentType == PAYMENT_TYPE_RAZORPAY) {
+              ///  razorPayPayment();
+              ///} else if (selectedPaymentType == PAYMENT_TYPE_STRIPE) {
+              ///  stripePay();
 
-                ///} else if (selectedPaymentType == PAYMENT_TYPE_PAYSTACK) {
-                ///  payStackPayment(context);
-              } else if (selectedPaymentType == PAYMENT_TYPE_PAYPAL) {
-                payPalPayment();
-              } else if (selectedPaymentType == PAYMENT_TYPE_FLUTTERWAVE) {
+              ///} else if (selectedPaymentType == PAYMENT_TYPE_PAYSTACK) {
+              ///  payStackPayment(context);
+              if (selectedPaymentType == PAYMENT_TYPE_FLUTTERWAVE) {
                 flutterWaveCheckout();
               } else if (selectedPaymentType == PAYMENT_TYPE_PAYTABS) {
                 payTabsPayment();
               } else if (selectedPaymentType == PAYMENT_TYPE_MERCADOPAGO) {
                 // mercadoPagoPayment();
+                /*
               } else if (selectedPaymentType == PAYMENT_TYPE_MYFATOORAH) {
                 myFatoorahPayment();
               } else if (selectedPaymentType == PAYMENT_TYPE_PAYTM) {
                 paytmPayment();
               }
+              */
+              }
+              ;
             },
           ),
         ),

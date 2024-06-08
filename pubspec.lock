@@ -369,14 +369,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.0"
-  eventify:
-    dependency: transitive
-    description:
-      name: eventify
-      sha256: b829429f08586cc2001c628e7499e3e3c2493a1d895fd73b00ecb23351aa5a66
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.1"
   fake_async:
     dependency: transitive
     description:
@@ -574,14 +566,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "8.1.5"
-  flutter_braintree:
-    dependency: "direct main"
-    description:
-      name: flutter_braintree
-      sha256: d364251cf57c028e8481869222d571c90df819ae234d9fb349713c4ffa25ba96
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.0"
   flutter_cache_manager:
     dependency: transitive
     description:
@@ -635,14 +619,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.0.6"
-  flutter_paystack:
-    dependency: "direct main"
-    description:
-      name: flutter_paystack
-      sha256: b2038c8f0cfa5a3bdb7b0e2016ceaedbc57e4445180ce6aea56cb0d83a016973
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.7"
   flutter_paytabs_bridge:
     dependency: "direct main"
     description:
@@ -683,14 +659,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.1"
-  flutter_stripe:
-    dependency: "direct main"
-    description:
-      name: flutter_stripe
-      sha256: "4f92660607b91310ec345948355c68843971d3f70673b529076707259b442513"
-      url: "https://pub.dev"
-    source: hosted
-    version: "9.6.0"
   flutter_svg:
     dependency: transitive
     description:
@@ -749,14 +717,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
-  freezed_annotation:
-    dependency: transitive
-    description:
-      name: freezed_annotation
-      sha256: c3fd9336eb55a38cc1bbd79ab17573113a8deccd0ecbbf926cca3c62803b5c2d
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.4.1"
   frontend_server_client:
     dependency: transitive
     description:
@@ -1293,14 +1253,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "10.2.1"
-  my_fatoorah:
-    dependency: "direct main"
-    description:
-      name: my_fatoorah
-      sha256: c7b32ab5e780b739737ba6beadbe1ea1461af4fd870576b9b91241864e1cd904
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.3.0"
   nested:
     dependency: transitive
     description:
@@ -1453,14 +1405,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.1"
-  paytm:
-    dependency: "direct main"
-    description:
-      name: paytm
-      sha256: "196ef69fa56f9c4635af6d78d96a6d444b7ec4d7ed57b8c0079a4c9ed2504015"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.1"
   pdf:
     dependency: "direct main"
     description:
@@ -1549,14 +1493,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.1"
-  razorpay_flutter:
-    dependency: "direct main"
-    description:
-      name: razorpay_flutter
-      sha256: "5ae44cdea5312f8ef830ec04e31f9bdeeb83522ef1f314a25c463dd934c37cad"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.3.7"
   rxdart:
     dependency: transitive
     description:
@@ -1738,30 +1674,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
-  stripe_android:
-    dependency: transitive
-    description:
-      name: stripe_android
-      sha256: "1de36b35c50f33e538c8e4bd6173f0ab8d7d8e6b9e05388488775e439c29b7d2"
-      url: "https://pub.dev"
-    source: hosted
-    version: "9.6.0+2"
-  stripe_ios:
-    dependency: transitive
-    description:
-      name: stripe_ios
-      sha256: "4b176f4ee7eaf229815b90c3ff78935da9e01765f4d3153b76fd0d3d64680294"
-      url: "https://pub.dev"
-    source: hosted
-    version: "9.6.0"
-  stripe_platform_interface:
-    dependency: transitive
-    description:
-      name: stripe_platform_interface
-      sha256: ac3c6ac938a26674ae8ae691d689e0b949ab1a8d270489f08d35446dd8d5bea0
-      url: "https://pub.dev"
-    source: hosted
-    version: "9.6.0"
   synchronized:
     dependency: transitive
     description:
