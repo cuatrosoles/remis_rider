@@ -12,7 +12,7 @@ const GOOGLE_MAP_API_KEY = 'AIzaSyD4HpgVsecTY68cxEUgPLjHNwE29B8KUH4';
 /// const DOMAIN_URL =
 ///    'https://remises.juanprogramador.com'; // Don't add slash at the end of the url
 const DOMAIN_URL =
-    'https://xn--remissessaenzpea-lub.com'; // Don't add slash at the end of the url
+    'https://saenzpenaremis.online'; // Don't add slash at the end of the url
 
 //region MQTT port and unique name
 final client = MqttServerClient.withPort("broker.hivemq.com", "", 1883);
