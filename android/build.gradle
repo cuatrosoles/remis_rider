@@ -14,8 +14,28 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
         mavenCentral()
+        mavenLocal()
+        maven { url("$rootDir/../node_modules/react-native/android") }
+        maven { url("$rootDir/../node_modules/jsc-android/dist") }
+        google()
+        maven { url 'https://www.jitpack.io' }
+        jcenter()
+        flatDir {
+            dirs "$rootProject.projectDir/libs"
+        }
+
+        maven {
+            url "$rootDir/../node_modules/@notifee/react-native/android/libs"
+        }
+
+        maven {
+            url "https://cardinalcommerceprod.jfrog.io/artifactory/android"
+            credentials {
+                username 'braintree_team_sdk'
+                password 'AKCp8jQcoDy2hxSWhDAUQKXLDPDx6NYRkqrgFLRc3qDrayg6rrCbJpsKKyMwaykVL8FWusJpp'
+            }
+        }
     }
 }
 
